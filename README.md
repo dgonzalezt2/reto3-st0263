@@ -1,9 +1,9 @@
 # ST0263 - Tópicos Especiales de Telemática
 
 ## Integrantes:
-- David Gonzalez Tamayo (dgonzalez2@eafit.edu.co)
-- Juan Esteban Castro Garcia (jecastrog@eafit.edu.co)
-- Tomas Bernal Zuluaga (tbernalz@eafit.edu.co)
+- David González Tamayo (dgonzalez2@eafit.edu.co)
+- Juan Esteban Castro García (jecastrog@eafit.edu.co)
+- Tomás Bernal Zuluaga (tbernalz@eafit.edu.co)
 
 ## Profesor
 - **Nombre:** Edwin Nelson Montoya Munera
@@ -75,4 +75,7 @@ Para acceder a la página web: https://reto3.reto3.me/
 
 
 ## 6. Referencias.
-
+* [Let's Encrypt]([https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html](https://medium.com/@utkarsh_verma/how-to-obtain-a-wildcard-ssl-certificate-from-lets-encrypt-and-setup-nginx-to-use-wildcard-cfb050c8b33f))
+* [Nginx con Cerbot](https://www.letscloud.io/community/how-to-set-up-an-nginx-with-certbot-on-ubuntu)
+* [NFS](https://mohsensy.github.io/sysadmin/2020/04/01/wordpress-nfs.html)
+* ChatGPT
