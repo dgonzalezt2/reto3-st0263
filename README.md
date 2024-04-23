@@ -47,6 +47,21 @@ Se utilizó Docker, con sus respectivos docker-compose para contenerizar correct
 
 ## IP o nombres de dominio en nube o en la máquina servidor.
 
+Para acceder a la página web: https://reto3.reto3.me/
+
+* **Balanceador de carga:** IP elástica de AWS: 3.215.163.106.
+
+* **Wordpress 1:** IP privada: 
+
+* **Wordpress 2:** IP privada: 
+
+* **Base de datos:** IP privada:
+
+* **NFS Server:** IP privada: 
+
+* **Bastion Host:** IP pública: 
+
+[Instancias] 
 
 ## 5. Resultado final.
 
