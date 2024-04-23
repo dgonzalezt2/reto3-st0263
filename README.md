@@ -75,7 +75,7 @@ Para acceder a la página web: https://reto3.reto3.me/
 
 
 ## 6. Referencias.
-* [Let's Encrypt]([https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html](https://medium.com/@utkarsh_verma/how-to-obtain-a-wildcard-ssl-certificate-from-lets-encrypt-and-setup-nginx-to-use-wildcard-cfb050c8b33f))
+* [Let's Encrypt](https://medium.com/@utkarsh_verma/how-to-obtain-a-wildcard-ssl-certificate-from-lets-encrypt-and-setup-nginx-to-use-wildcard-cfb050c8b33f)
 * [Nginx con Cerbot](https://www.letscloud.io/community/how-to-set-up-an-nginx-with-certbot-on-ubuntu)
 * [NFS](https://mohsensy.github.io/sysadmin/2020/04/01/wordpress-nfs.html)
-* ChatGPT
+* [ChatGPT](https://chat.openai.com/)
