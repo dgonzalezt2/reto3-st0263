@@ -46,3 +46,11 @@ Se utilizó Docker, con sus respectivos docker-compose para contenerizar correct
 ## 4. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
 ## IP o nombres de dominio en nube o en la máquina servidor.
+
+
+## 5. Resultado final.
+
+Video explicativo: ()
+
+
+## 6. Referencias.
