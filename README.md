@@ -110,35 +110,35 @@ networks:
 
 ## Configuración Nginx
 ```bash
-# Início da configuração do Nginx
-user www-data;  # Define o usuário para processos do Nginx
-worker_processes auto;  # Número de processos trabalhadores (auto é uma escolha comum)
+# Inicio de la configuración de Nginx
+user www-data;  # Define el usuario para los procesos de Nginx
+worker_processes auto;  # Número de procesos trabajadores (auto es una opción común)
 
-# Seção 'events' é obrigatória
+# La sección 'events' es obligatoria
 events {
-  worker_connections 1024;  # Número máximo de conexões simultâneas por processo trabalhador
+  worker_connections 1024;  # Número máximo de conexiones simultáneas por proceso trabajador
 }
 
-# Seção 'http' para configuração de servidores e outros parâmetros
+# Sección 'http' para la configuración de servidores y otros parámetros
 http {
-  # Definição do upstream para balanceamento de carga
+  # Definición del upstream para el balanceo de carga
   upstream wordpress_backend {
     ip_hash;
-    server 10.0.2.16:80;  # Primeira instância do WordPress
-    server 10.0.2.118:80;  # Segunda instância do WordPress
+    server 10.0.2.16:80;  # Primera instancia de WordPress
+    server 10.0.2.118:80;  # Segunda instancia de WordPress
   }
 
-  # Bloco de servidor para redirecionar HTTP para HTTPS
+  # Bloque de servidor para redirigir HTTP a HTTPS
   server {
     listen 80;
     server_name reto3.reto3.me;
 
     location / {
-      return 301 https://reto3.reto3.me$request_uri;  # Redireciona para HTTPS
+      return 301 https://reto3.reto3.me$request_uri;  # Redirige a HTTPS
     }
   }
 
-  # Bloco de servidor para HTTPS com certificado SSL
+  # Bloque de servidor para HTTPS con certificado SSL
   server {
     listen 443 ssl;
     server_name reto3.reto3.me;
@@ -155,13 +155,13 @@ http {
     }
   }
 
-  # Bloco de servidor para redirecionar acesso por IP para domínio
+  # Bloque de servidor para redirigir el acceso por IP al dominio
   server {
     listen 443 ssl;
     server_name 3.211.239.255;
 
     location / {
-      return 301 https://reto3.reto3.me$request_uri;  # Redireciona para domínio
+      return 301 https://reto3.reto3.me$request_uri;  # Redirige al dominio
     }
   }
 }
