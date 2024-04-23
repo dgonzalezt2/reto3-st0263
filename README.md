@@ -60,7 +60,8 @@ Para acceder a la página web: https://reto3.reto3.me/
 
 * **NFS Server:** IP privada: 10.0.2.20
 
-[Instancias] 
+![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/2cf4685e-5f0e-4d3f-88f0-d2ef7c9420dc)
+![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/d2b2b512-1701-49c5-9f3a-1f79333814aa) 
 
 ## 5. Resultado final.
 
@@ -69,8 +70,9 @@ Para acceder a la página web: https://reto3.reto3.me/
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/e7733d93-1106-4f57-8255-2aa4f1861100)
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/c198b9d7-791e-4f50-87c6-96239d0d1ed7)
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/1f2dc4d4-a7fa-4698-93fd-21ad7cac3b71)
-![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/2cf4685e-5f0e-4d3f-88f0-d2ef7c9420dc)
-![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/d2b2b512-1701-49c5-9f3a-1f79333814aa)
+![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/334c212a-30b3-4b69-ade4-d0ebc23d782a)
+
 
 
 ## 6. Referencias.
+
