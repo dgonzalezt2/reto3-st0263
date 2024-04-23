@@ -63,6 +63,110 @@ Para acceder a la página web: https://reto3.reto3.me/
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/2cf4685e-5f0e-4d3f-88f0-d2ef7c9420dc)
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/d2b2b512-1701-49c5-9f3a-1f79333814aa) 
 
+### Docker Compose Wordpress
+```yaml
+version: '3.1'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    volumes:
+      - /mount/point:/var/www/html/wp-content/uploads
+    environment:
+      WORDPRESS_DB_HOST: 10.0.2.85
+      WORDPRESS_DB_USER: wordpress_user
+      WORDPRESS_DB_PASSWORD: strongpassword
+      WORDPRESS_DB_NAME: wordpress_db
+    networks:
+      - vpc_network
+networks:
+  vpc_network:
+    driver: bridge
+```
+
+### Docker Compose MySQL
+
+```yaml
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: wordpress_db
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: strongpassword
+    networks:
+      - vpc_network
+networks:
+  vpc_network:
+    driver: bridge
+```
+
+## Configuración Nginx
+```bash
+# Início da configuração do Nginx
+user www-data;  # Define o usuário para processos do Nginx
+worker_processes auto;  # Número de processos trabalhadores (auto é uma escolha comum)
+
+# Seção 'events' é obrigatória
+events {
+  worker_connections 1024;  # Número máximo de conexões simultâneas por processo trabalhador
+}
+
+# Seção 'http' para configuração de servidores e outros parâmetros
+http {
+  # Definição do upstream para balanceamento de carga
+  upstream wordpress_backend {
+    ip_hash;
+    server 10.0.2.16:80;  # Primeira instância do WordPress
+    server 10.0.2.118:80;  # Segunda instância do WordPress
+  }
+
+  # Bloco de servidor para redirecionar HTTP para HTTPS
+  server {
+    listen 80;
+    server_name reto3.reto3.me;
+
+    location / {
+      return 301 https://reto3.reto3.me$request_uri;  # Redireciona para HTTPS
+    }
+  }
+
+  # Bloco de servidor para HTTPS com certificado SSL
+  server {
+    listen 443 ssl;
+    server_name reto3.reto3.me;
+
+    ssl_certificate /etc/letsencrypt/live/reto3.reto3.me/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/reto3.reto3.me/privkey.pem;
+
+    location / {
+      proxy_pass http://wordpress_backend;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+    }
+  }
+
+  # Bloco de servidor para redirecionar acesso por IP para domínio
+  server {
+    listen 443 ssl;
+    server_name 3.211.239.255;
+
+    location / {
+      return 301 https://reto3.reto3.me$request_uri;  # Redireciona para domínio
+    }
+  }
+}
+```
+
 ## 5. Resultado final.
 
 ![Video explicativo](https://youtu.be/ce-l0f2PG0M)
