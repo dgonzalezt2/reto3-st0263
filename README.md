@@ -169,7 +169,7 @@ http {
 
 ## 5. Resultado final.
 
-![Video explicativo](https://youtu.be/ce-l0f2PG0M)
+[Video explicativo](https://youtu.be/ce-l0f2PG0M)
 
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/e7733d93-1106-4f57-8255-2aa4f1861100)
 ![image](https://github.com/dgonzalezt2/reto3-st0263/assets/82610906/c198b9d7-791e-4f50-87c6-96239d0d1ed7)
