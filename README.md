@@ -44,3 +44,5 @@ Se utilizó la arquitectura presentada a continuación:
 Se utilizó Docker, con sus respectivos docker-compose para contenerizar correctamente las aplicaciones y servicios necesarios, puede encontrar estos archivos en la carpeta `docker` de este repositorio.
 
 ## 4. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
+
+## IP o nombres de dominio en nube o en la máquina servidor.
