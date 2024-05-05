@@ -9,7 +9,7 @@
 - **Nombre:** Edwin Nelson Montoya Munera
 - **Correo:** emontoya@eafit.edu.co
 
-# Proyecto 1 (Sistema de archivos distribuidos)
+# Reto 3 (Aplicación Monolítica con Balanceo y Datos Distribuidos (BD y archivos))
 
 ## 1. Breve descripción de la actividad
 
